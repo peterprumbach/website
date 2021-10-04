@@ -1,17 +1,24 @@
+
+image:
+  name: docker:18-git
+
+services:
+  - docker:dind
+
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay2
+
+before_script:
+  - git submodule sync --recursive
+  - git submodule update --init --recursive
+  - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+
 stages:
   - build
 
-Build:
+build-image:
   stage: build
-
-  image: docker:latest-git
-  only:
-    - main
-
-  before_script:
-    - git submodule sync --recursive
-    - git submodule update --init --recursive
-    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
   script:
     - echo -n $CI_JOB_TOKEN | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
     # the image is tagged as latest, because it is the master branch
