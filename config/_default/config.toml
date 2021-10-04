@@ -1,0 +1,20 @@
+baseURL = "https://peterprumbach.de"
+languageCode = "de"
+defaultContentLanguage = "de"
+theme = "congo"
+
+title = "Peter Prumbach"
+copyright = "&copy; 2021 Peter Prumbach"
+
+enableEmoji = true
+enableRobotsTXT = true
+
+[author]
+  name = "Peter Prumbach"
+  image = "peter.jpg"
+  links = [
+    { email = "mailto:hallo@peterprumbach.de" },
+    { instagram = "https://instagram.com/peter_prumbach" },
+    { linkedin = "https://linkedin.com/in/peterprumbach" },
+    { gitlab = "https://gitlab.com/peterprumbach" }
+   ]
