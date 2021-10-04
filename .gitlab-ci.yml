@@ -1,0 +1,18 @@
+stages:
+  - build
+
+Build:
+  stage: build
+
+  image: docker:18-git
+  only:
+    - main
+
+  before_script:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
+  script:
+    - echo -n $CI_JOB_TOKEN | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
+    # the image is tagged as latest, because it is the master branch
+    - docker build -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:latest

@@ -1,0 +1,15 @@
+:80 {
+	@static path_regexp .(css|js|svg|png|woff2?)$
+
+	root * /web
+
+	file_server {
+		precompressed zstd br gzip
+	}
+
+	route {
+		header Cache-Control max-age=3600
+		header @static Cache-Control max-age=31536000
+	}
+	encode zstd gzip
+}
