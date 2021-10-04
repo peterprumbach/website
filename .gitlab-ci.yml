@@ -4,7 +4,7 @@ stages:
 Build:
   stage: build
 
-  image: docker:latest
+  image: docker:latest-git
   only:
     - main
 
