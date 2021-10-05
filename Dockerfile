@@ -10,9 +10,11 @@ RUN /hugo version
 
 RUN apk add --no-cache git
 
-COPY . /app
+RUN /hugo -D
+
+COPY ./public /app
 WORKDIR /app
 
 FROM docker.io/caddy
 COPY Caddyfile /etc/caddy/Caddyfile
-COPY --from=build /app/public /web
+COPY --from=build /app /web
