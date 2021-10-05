@@ -10,11 +10,11 @@ RUN /hugo version
 
 RUN apk add --no-cache git
 
-RUN /hugo -D
-
-COPY ./public /app
+COPY . /app
 WORKDIR /app
+
+RUN /hugo --minify --enableGitInfo
 
 FROM docker.io/caddy
 COPY Caddyfile /etc/caddy/Caddyfile
-COPY --from=build /app /web
+COPY --from=build /app/public /web
