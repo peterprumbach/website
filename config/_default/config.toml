@@ -15,6 +15,6 @@ enableRobotsTXT = true
   links = [
     { email = "mailto:hallo@peterprumbach.de" },
     { instagram = "https://instagram.com/peter_prumbach" },
-    { linkedin = "https://linkedin.com/in/peterprumbach" },
+    { linkedin = "https://www.linkedin.com/in/peter-prumbach/" },
     { gitlab = "https://gitlab.com/peterprumbach" }
    ]
