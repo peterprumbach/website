@@ -4,7 +4,7 @@ defaultContentLanguage = "de"
 theme = "congo"
 
 title = "Peter Prumbach"
-copyright = "&copy; 2021 Peter Prumbach"
+copyright = "&copy; 2022 Peter Prumbach"
 
 enableEmoji = true
 enableRobotsTXT = true
