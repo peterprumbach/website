@@ -1,20 +1,60 @@
-baseURL = "https://peterprumbach.de"
-languageCode = "de"
-defaultContentLanguage = "de"
-theme = "congo"
+## Basic Configuration
 
+baseurl = "https://peterprumbach.de/"
+builddrafts = false
+canonifyurls = false
+languageCode = "en-US"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+author = "Peter Prumbach"
 title = "Peter Prumbach"
-copyright = "&copy; 2022 Peter Prumbach"
 
-enableEmoji = true
+theme = "hugo-goa"
+
+googleAnalytics = "XYZ"
 enableRobotsTXT = true
 
-[author]
-  name = "Peter Prumbach"
-  image = "peter.jpg"
-  links = [
-    { email = "mailto:hallo@peterprumbach.de" },
-    { instagram = "https://instagram.com/peter_prumbach" },
-    { linkedin = "https://www.linkedin.com/in/peter-prumbach/" },
-    { gitlab = "https://gitlab.com/peterprumbach" }
-   ]
+## Site Settings
+[params]
+author = "Peter Prumbach"
+intro = "Computer science student"
+description = "Now @T-Systems MMS. I am currently working on my bachelor's degree and my homeserver configuration"
+authorimage = "peter.jpg"
+dateformat = "2 Jan 2006"
+
+## Site Meta Settings
+[params.meta]
+description = "Simple minimalist theme"
+keywords = "minimalist,blog,goa,hugo,developer"
+
+## Social Accounts
+[params.social]
+github = "peterprumbach"
+instagram = "peter.prumbach"
+linkedin = "peter-prumbach"
+email = "hello@peterprumbach.de"
+pgp = "key_fingerprint"
+
+## Extras
+[params.extra]
+copyright = "© 2022. Peter Prumbach. [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."
+poweredby = false
+highlightjs = true
+socialmarkup = true
+toc = true
+displayrssicon = false
+
+## Main Menu
+[[menu.main]]
+    name = "blog"
+    weight = 100
+    identifier = "blog"
+    url = "/blog/"
+[[menu.main]]
+    name = "about"
+    identifier = "about"
+    weight = 200
+    url = "/about/"
