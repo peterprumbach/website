@@ -35,8 +35,8 @@ keywords = "minimalist,blog,goa,hugo,developer"
 github = "peterprumbach"
 instagram = "peter.prumbach"
 linkedin = "peter-prumbach"
-email = "hello@peterprumbach.de"
-pgp = "key_fingerprint"
+email = "mail@peterprumbach.de"
+pgp = "Peter_Prumbach_0x1BD6862A_public"
 
 ## Extras
 [params.extra]
